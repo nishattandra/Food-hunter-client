@@ -1,19 +1,25 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import './Home.css'
 import Chef from '../Chef/Chef';
 import { useLoaderData } from 'react-router-dom';
+import FirstBanner from '../FirstBanner/FirstBanner';
 
 const Home = () => {
 
     const allChef = useLoaderData();
 
     return (
-        <div className='container' style={{display:'grid', gridTemplateColumns: '1fr 1fr 1fr'}}>
-            {
-                allChef.map(chef => <Chef
-                key={chef.id}
-                chef = {chef}></Chef>)
-            }
+        <div>
+            <h2 className='text-center mt-2 fw-bolder'>The Chefs</h2>
+            <div className='container' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+                {
+                    allChef.map(chef => <Chef
+                        key={chef.id}
+                        chef={chef}></Chef>)
+                }
+            </div>
+            
+            <FirstBanner></FirstBanner>
         </div>
     );
 };

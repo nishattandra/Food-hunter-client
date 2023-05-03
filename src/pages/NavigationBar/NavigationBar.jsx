@@ -6,9 +6,9 @@ const NavigationBar = () => {
     return (
         <div>
             <Container className='mt-2'>
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='p-4 rounded' >
                     <Container>
-                        <h2>Bengali Food</h2>
+                        <h2 className='fw-bold'>Hunger<span className='text-success'>Court</span> </h2>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">
