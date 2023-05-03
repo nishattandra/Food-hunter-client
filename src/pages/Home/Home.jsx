@@ -1,14 +1,18 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
 import Chef from '../Chef/Chef';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
 
-    const array = [1, 2, 3, 4, 5, 6]
+    const allChef = useLoaderData();
+
     return (
         <div className='container' style={{display:'grid', gridTemplateColumns: '1fr 1fr 1fr'}}>
             {
-                array.map(arr => <Chef></Chef>)
+                allChef.map(chef => <Chef
+                key={chef.id}
+                chef = {chef}></Chef>)
             }
         </div>
     );
