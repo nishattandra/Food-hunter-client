@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 import { Link, useRouteError } from 'react-router-dom'
 
 const ErrorPage = () => {
@@ -9,7 +10,7 @@ const ErrorPage = () => {
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 512 512'
-          className='w-40 h-40 text-gray-600'
+          className='w-50 h-50 text-gray-600'
         >
           <path
             fill='currentColor'
@@ -42,7 +43,7 @@ const ErrorPage = () => {
             to='/'
             className='px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900'
           >
-            Back to homepage
+            <Button>Back to homepage</Button>
           </Link>
         </div>
       </div>
