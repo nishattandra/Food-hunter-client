@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { FaBeer, FaUserFriends} from 'react-icons/fa';
+import {FaUserFriends} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
                 <hr />
                 <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
                     <Form.Label>EMAIL</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" name='email' placeholder="Enter email" required/>
                     <Form.Text className="text-muted">
 
                     </Form.Text>
@@ -19,7 +19,7 @@ const Login = () => {
 
                 <Form.Group className="mb-5" controlId="formBasicPassword">
                     <Form.Label>PASSWORD</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control type="password" name='password' placeholder="Password" required/>
                 </Form.Group>
                 <hr />
                 <Button variant="secondary" type="submit" className='mt-3 p-2 fs-5'>
