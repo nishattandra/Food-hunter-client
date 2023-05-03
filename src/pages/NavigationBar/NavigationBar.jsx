@@ -1,19 +1,24 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
     return (
         <div>
-            <Container>
+            <Container className='mt-2'>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <Container>
                         <h2>Bengali Food</h2>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">
-                                <Link to="/category/0">Home</Link>
-                                <Link to="/category/0">Blog</Link>
+                                <Link className='text-decoration-none ms-2' to="/">Home</Link>
+                                <Link className='text-decoration-none ms-2' to="/blog">Blog</Link>
+                            </Nav>
+                            <Nav>
+                                <Link to='/login'>
+                                    <Button>Login</Button>
+                                </Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
