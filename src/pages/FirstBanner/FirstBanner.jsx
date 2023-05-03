@@ -8,7 +8,7 @@ import { Carousel } from 'react-bootstrap';
 const FirstBanner = () => {
     return (
         <div className='container mt-5'>
-            <h2 className='text-center fw-bold mb-5'>Top <span className='fst-italic text-success'>Favourite</span> Foods</h2>
+            <h2 className='text-center fw-bold mb-5'><span className='fst-italic text-success'>Popular</span> Recipes</h2>
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
