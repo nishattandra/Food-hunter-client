@@ -70,11 +70,52 @@ const Blog = () => {
             </div>
             <div className=' m-10 p-5  border border-indigo-600 rounded-md mb-2'>
                 <h1 className='text-center font-bold'>Ques-03: Tell us the difference between nodejs and express js?</h1>
-                <p>useRef(initialValue) is a built-in React hook that accepts one argument as the initial value and returns a reference. A reference is an object having a special property current .</p>
+                <Table striped bordered hover className='mt-3 rounded'>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Features</th>
+                            <th>Express.js</th>
+                            <th>Node.js</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Usage</td>
+                            <td>It is used to build web-apps using approaches and principles of Node.js.</td>
+                            <td> It is used to build server-side, input-output, event-driven apps.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Level of Features</td>
+                            <td>More features than Node.js.</td>
+                            <td>Fewer features.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Building Block</td>
+                            <td >It is built on Node.js.</td>
+                            <td>It is built on Google's V8 engine.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Written In</td>
+                            <td >JavaScript.</td>
+                            <td>C, C++, JavaScript.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Framework/ Platform</td>
+                            <td >Framework based on Node.js.</td>
+                            <td>Run-time platform or environment designed for server-side execution of JavaScript.</td>
+                        </tr>
+                    </tbody>
+                </Table>
             </div>
             <div className=' m-10 p-5  border border-indigo-600 rounded-md'>
-                <h1 className='text-center font-bold'>Ques-04: What is useMemo?</h1>
-                <p>useMemo is a React Hook that lets you cache the result of a calculation between re-renders. const cachedValue = useMemo(calculateValue, dependencies) Reference. useMemo(calculateValue, dependencies)</p>
+                <h1 className='text-center font-bold'>Ques-04: What is a custom hook, and why will you create a custom hook?</h1>
+                <p>Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
             </div>
         </div>
     );

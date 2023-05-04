@@ -25,7 +25,7 @@ const SingleRecipe = ({ re }) => {
                     <h4>Recipe Name: {recipeName}</h4>
                     <ul>
                         {
-                            ingredients.map(ing => <li>{ing}</li>)
+                            ingredients.map(ing => <li key={ing}>{ing}</li>)
                         }
                     </ul>
                     <Button className={favButton?'d-none':''} onClick={handleToast} variant="primary">Add Favourite</Button>

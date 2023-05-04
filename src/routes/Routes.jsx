@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Recipes from "../pages/Recipes/Recipes";
 import { FaTimesCircle } from "react-icons/fa";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/blog",
-          element: <Blog></Blog>
+          element: <PrivateRoutes><Blog></Blog></PrivateRoutes>
         },
         {
           path:"/login",
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/chef/:id",
-          element:<Recipes></Recipes>,
+          element:<PrivateRoutes><Recipes></Recipes></PrivateRoutes>,
           loader: ({params})=> fetch(`http://localhost:5000/chefs/${params.id}`)
         }
       ]

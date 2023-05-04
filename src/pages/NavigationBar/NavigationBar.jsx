@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -12,6 +12,15 @@ const NavigationBar = () => {
             .then()
             .catch(error => console.log(error));
     }
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseOver = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseOut = () => {
+        setIsHovering(false);
+    };
     return (
         <div>
             <Container className='mt-2'>
@@ -21,12 +30,16 @@ const NavigationBar = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">
-                                <NavLink to='/' className={({isActive})=>(isActive?'text-success fw-bold fs-3 text-decoration-none m-2':'text-blue fs-3 text-decoration-none m-2')}>Home</NavLink>
-                                <NavLink to='/blog' className={({isActive})=>(isActive?'text-success fw-bold fs-3 text-decoration-none m-2':'text-blue fs-3 text-decoration-none m-2')}>Blog</NavLink>
+                                <NavLink to='/' className={({ isActive }) => (isActive ? 'text-success fw-bold fs-3 text-decoration-none m-2' : 'text-blue fs-3 text-decoration-none m-2')}>Home</NavLink>
+                                <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-success fw-bold fs-3 text-decoration-none m-2' : 'text-blue fs-3 text-decoration-none m-2')}>Blog</NavLink>
                             </Nav>
                             <Nav>
+                                {isHovering && (
+                                    <h4>{user.displayName}</h4>
+                                )}
                                 {
-                                    user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
+                                    user && <img onMouseOver={handleMouseOver}
+                                        onMouseOut={handleMouseOut} style={{ width: '40px', borderRadius: '50%' }} src={user.photoURL} alt="" />
                                 }
 
                                 {

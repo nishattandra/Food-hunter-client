@@ -16,6 +16,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+
         console.log(name, photo, email, password)
         createUser(email, password)
             .then(result => {
@@ -64,7 +65,7 @@ const Register = () => {
                 </Form.Group>
                 <hr />
                 <Button variant="secondary" type="submit" className='mt-3 p-2 fs-5'>
-                    Register
+                <Link to='/login' className='text-white text-decoration-none'>Register</Link>
                 </Button>
                 <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
                     <Link to='/login' className='text-white text-decoration-none'>Login</Link>
