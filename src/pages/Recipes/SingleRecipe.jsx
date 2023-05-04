@@ -30,7 +30,7 @@ const SingleRecipe = ({ re }) => {
 
                     <div className='d-flex justify-content-between mb-2'>
                         <p>Ratings: {rating}</p>
-                        <Button className={favButton ? 'd-none' : ''} onClick={handleToast} variant="primary">Add Favourite <HiOutlineHeart style={{fill:'red', fontSize:'1.5rem', color:'red'}}></HiOutlineHeart></Button>
+                        <Button className={favButton ? 'disabled' : ''} onClick={handleToast} variant="primary">Add Favourite <HiOutlineHeart style={{fill:'red', fontSize:'1.5rem', color:'red'}}></HiOutlineHeart></Button>
                         <ToastContainer></ToastContainer>
                     </div>
                 </div>
