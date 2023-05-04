@@ -3,10 +3,10 @@ import { Button, Card } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const SingleRecipe = ({ re }) => {
-    const [favbutton, setfavbutton] = useState(false);
+    const [favButton, setFavbutton] = useState(false);
     const handleToast = () =>{
         toast("Add to favourite");
-        setfavbutton(true);
+        setFavbutton(true);
     }
     const { recipeImage, recipeName, ingredients } = re;
     return (
@@ -28,7 +28,7 @@ const SingleRecipe = ({ re }) => {
                             ingredients.map(ing => <li>{ing}</li>)
                         }
                     </ul>
-                    <Button className={favbutton?'d-none':''} onClick={handleToast} variant="primary">Add Favourite</Button>
+                    <Button className={favButton?'d-none':''} onClick={handleToast} variant="primary">Add Favourite</Button>
                     <ToastContainer></ToastContainer>
                 </div>
             </div>
