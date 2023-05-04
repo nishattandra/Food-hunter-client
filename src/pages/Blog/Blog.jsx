@@ -3,6 +3,12 @@ import { Table } from 'react-bootstrap';
 import ReactToPdf from "react-to-pdf";
 const ref = React.createRef();
 const Blog = () => {
+    const options = {
+        orientation: 'landscape',
+        unit: 'in',
+        format: [20, 20]
+    };
+
     return (
         <div className='container'>
             <div className='container' ref={ref}>
@@ -121,7 +127,7 @@ const Blog = () => {
                 </div>
             </div>
             <div>
-                <ReactToPdf targetRef={ref} filename="div-blue.pdf">
+                <ReactToPdf targetRef={ref} filename="example.pdf" options={options} x={1} y={1} scale={1}>
                     {({ toPdf }) => (
                         <button className='btn btn-primary mt-4 fw-bold fs-4 d-flex justify-content-center' onClick={toPdf}>Generate pdf</button>
                     )}
