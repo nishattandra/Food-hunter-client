@@ -129,7 +129,7 @@ const Blog = () => {
             <div>
                 <ReactToPdf targetRef={ref} filename="example.pdf" options={options} x={1} y={1} scale={1}>
                     {({ toPdf }) => (
-                        <button className='btn btn-primary mt-4 fw-bold fs-4 d-flex justify-content-center' onClick={toPdf}>Generate pdf</button>
+                        <button className='btn btn-primary mt-4 fw-bold fs-4 d-flex justify-content-center' onClick={toPdf}>Download PDF</button>
                     )}
                 </ReactToPdf>
             </div>
