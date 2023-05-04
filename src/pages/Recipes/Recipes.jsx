@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import SingleRecipe from './SingleRecipe';
-
+import LazyLoad from 'react-lazy-load';
 const Recipes = () => {
 
     const loadedRecipe = useLoaderData()
@@ -12,7 +12,10 @@ const Recipes = () => {
         <div className='container'>
 
             <Card style={{ width: '18rem' }} className='mx-auto '>
-                <Card.Img variant="top" src={chefPicture} />
+                
+                <LazyLoad offset={300}>
+                    <Card.Img variant="top" src={chefPicture} />
+                </LazyLoad>
                 <Card.Body>
                     <Card.Title>{chefName}</Card.Title>
                     <Card.Text>

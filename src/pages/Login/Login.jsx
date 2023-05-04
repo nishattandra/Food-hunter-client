@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { FaUserFriends, FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-
+    const [err, setErr] = useState('')
     const { handleGoogleSignIn, handleGithubSignIn, signIn } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
@@ -53,6 +53,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error);
+                setErr(error.message)
             })
     }
 
@@ -91,6 +92,9 @@ const Login = () => {
                     <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5'>
                         <FaGithub></FaGithub> Log in with Github
                     </Button>
+                    <Form.Text>
+                        <p>{err}</p>
+                    </Form.Text>
                 </div>
 
             </Form>
