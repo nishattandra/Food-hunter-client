@@ -77,7 +77,7 @@ const Register = () => {
                 <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
                     <Link to='/login' className='text-white text-decoration-none'>Login</Link>
                 </Button>
-                <Form.Text>
+                <Form.Text className='text-danger'>
                     <p>{err}</p>
                 </Form.Text>
                 {/* <Form.Control type="submit" name='submit' placeholder="Submit" required /> */}

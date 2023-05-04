@@ -92,7 +92,7 @@ const Login = () => {
                     <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5'>
                         <FaGithub></FaGithub> Log in with Github
                     </Button>
-                    <Form.Text>
+                    <Form.Text className='text-danger'>
                         <p>{err}</p>
                     </Form.Text>
                 </div>

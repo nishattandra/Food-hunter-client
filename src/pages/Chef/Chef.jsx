@@ -21,7 +21,7 @@ const Chef = ({ chef }) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className='d-flex justify-content-between'>
-                        <span><HiOutlineHeart style={{ fontSize: '1.5rem', fill: 'red' }}></HiOutlineHeart>  {likes}</span>
+                        <span><HiOutlineHeart style={{ fontSize: '1.5rem', color: 'red', fill:'red' }}></HiOutlineHeart>  {likes}</span>
                         <Link to={`/chef/${id}`}>
                             <Button>View Recipes <HiArrowNarrowRight></HiArrowNarrowRight></Button>
                         </Link>
