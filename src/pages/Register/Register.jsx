@@ -38,7 +38,7 @@ const Register = () => {
     }
 
     return (
-        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5' style={{ width: '650px', height: '600px' }}>
+        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5' style={{ width: '650px', height: '620px' }}>
             <Form className=' mx-auto w-75 mt-4' onSubmit={handleRegister}>
                 <div className='d-flex'>
                     <h4 className='text-secondary'> <FaUserFriends style={{ fontSize: '3rem' }}></FaUserFriends> Register an Account</h4>
