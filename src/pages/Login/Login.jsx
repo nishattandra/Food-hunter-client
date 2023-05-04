@@ -6,13 +6,26 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
 
-    const { handleGoogleSignIn } = useContext(AuthContext)
+    const { handleGoogleSignIn, handleGithubSignIn } = useContext(AuthContext)
 
 
     const googleSignIn = () => {
         handleGoogleSignIn()
         .then(result =>{
             const loggedUser = result.user;
+            console.log(loggedUser)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
+
+
+    const githubSignIn = () => {
+        handleGithubSignIn()
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
         })
         .catch(error =>{
             console.log(error)
@@ -50,7 +63,7 @@ const Login = () => {
                         <FaGoogle></FaGoogle>      Log in with Google
                     </Button>
                     <br />
-                    <Button variant="white" type="submit" className='mt-3 p-2 fs-5'>
+                    <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5'>
                         <FaGithub></FaGithub> Log in with Github
                     </Button>
                 </div>
