@@ -1,8 +1,8 @@
-# b7a9-career-hub-nishattandra
-b7a9-career-hub-nishattandra created by GitHub Classroom
+# assignment-10-nishattandra
+assignment-10-nishattandra created by GitHub Classroom
 
 ## Live Link
-Hosted in Github -> [CareerGoals](https://assignment-10-ad2b3.web.app/)
+Hosted in Github -> [Hunger Counter](https://assignment-10-ad2b3.web.app/)
 
 
 ## Server Side Repo
@@ -22,6 +22,7 @@ Documentation Link -> [Link](https://headlessui.com/)
 Documentation Link -> [Link](https://react-hot-toast.com/docs)
 
 ## Resources & Credits
-
-
 Icon -> [Hero Icon](https://heroicons.com/)
+
+## Resources & Credits
+React Icon -> [React Icon](https://react-icons.github.io/react-icons/)
