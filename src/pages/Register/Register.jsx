@@ -32,6 +32,7 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error);
+                setErr(error.message)
             })
         // console.log('register Clicked')
     }
@@ -77,7 +78,7 @@ const Register = () => {
                 <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
                     <Link to='/login' className='text-white text-decoration-none'>Login</Link>
                 </Button>
-                <Form.Text className='text-danger'>
+                <Form.Text className='text-danger fs-5'>
                     <p>{err}</p>
                 </Form.Text>
                 {/* <Form.Control type="submit" name='submit' placeholder="Submit" required /> */}
