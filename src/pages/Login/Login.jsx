@@ -80,9 +80,10 @@ const Login = () => {
                     <Link to='/register' className='text-white text-decoration-none'>Create an Account</Link>
                 </Button>
                 <br />
+                <h2 className='mx-auto text-center'>OR</h2>
                 <div className='text-center'>
-                    <Button onClick={googleSignIn}  variant="white" type="submit" className='mt-3 p-2 fs-5 mx-auto'>
-                        <FaGoogle></FaGoogle>      Log in with Google
+                    <Button onClick={googleSignIn}  variant="white" type="submit" className=' p-2 fs-5 mx-auto'>
+                        <FaGoogle></FaGoogle> Log in with Google
                     </Button>
                     <br />
                     <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5'>
