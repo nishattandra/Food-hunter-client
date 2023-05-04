@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { FaUserFriends } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        console.log(name, photo, email, password)
+        createUser(email, password)
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+
     return (
         <div className=' border border-primary-subtle rounded-4 mx-auto mt-5' style={{ width: '650px', height: '600px' }}>
-            <Form className=' mx-auto w-75 mt-4'>
+            <Form className=' mx-auto w-75 mt-4' onSubmit={handleRegister}>
                 <div className='d-flex'>
                     <h4 className='text-secondary'> <FaUserFriends style={{ fontSize: '3rem' }}></FaUserFriends> Register an Account</h4>
                     <Link to='/login' className='mt-4 ms-5 text-secondary'>Already a member?</Link>
