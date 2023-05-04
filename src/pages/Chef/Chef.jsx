@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Card, CardGroup } from 'react-bootstrap';
 import { HiOutlineHeart, HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from 'react-router-dom';
-import FirstBanner from '../FirstBanner/FirstBanner';
 
 const Chef = ({ chef }) => {
 
