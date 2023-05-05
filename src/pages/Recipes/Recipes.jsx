@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import SingleRecipe from './SingleRecipe';
 import LazyLoad from 'react-lazy-load';
 import { HiOutlineHeart } from "react-icons/hi";
+import './Recipes.css'
 
 const Recipes = () => {
 
@@ -15,7 +16,7 @@ const Recipes = () => {
 
             <h3 className='mt-3 text-center fw-bold'>The Artist</h3>
 
-            <Card style={{ width: '40rem' }} className='mx-auto text-center mt-2'>
+            <Card style={{ width: '40rem' }} className='mx-auto text-center mt-2 profile'>
                 
                 <LazyLoad offset={300}>
                     <Card.Img  style={{width:'200px', marginTop:'10px'}} variant="top" src={chefPicture} />

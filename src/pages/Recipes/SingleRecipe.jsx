@@ -14,7 +14,7 @@ const SingleRecipe = ({ re }) => {
     const { recipeImage, recipeName, ingredients, method, rating } = re;
     return (
         <Card className=' mt-4 mb-3' >
-            <div className='d-flex'>
+            <div className='d-flex food'>
                 <img src={recipeImage} className='w-50 m-4' alt="" />
                 <div className='mt-4'>
                     <h4>Recipe Name: {recipeName}</h4>

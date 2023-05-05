@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { FaUserFriends } from 'react-icons/fa';
 import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import './Register.css'
 
 const Register = () => {
 
@@ -16,7 +17,7 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        if(password.length <6 ){
+        if (password.length < 6) {
             setErr('Add more than six character')
         }
         console.log(name, photo, email, password)
@@ -38,8 +39,11 @@ const Register = () => {
     }
 
     return (
-        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5' style={{ width: '650px', height: '620px' }}>
+        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 register' style={{ width: '650px', height: '620px' }}>
             <Form className=' mx-auto w-75 mt-4' onSubmit={handleRegister}>
+                <Form.Text className='text-danger fs-5'>
+                    <p>{err}</p>
+                </Form.Text>
                 <div className='d-flex'>
                     <h4 className='text-secondary'> <FaUserFriends style={{ fontSize: '3rem' }}></FaUserFriends> Register an Account</h4>
                     <Link to='/login' className='mt-4 ms-5 text-secondary'>Already a member?</Link>
@@ -78,9 +82,6 @@ const Register = () => {
                 <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
                     <Link to='/login' className='text-white text-decoration-none'>Login</Link>
                 </Button>
-                <Form.Text className='text-danger fs-5'>
-                    <p>{err}</p>
-                </Form.Text>
                 {/* <Form.Control type="submit" name='submit' placeholder="Submit" required /> */}
             </Form>
         </div>

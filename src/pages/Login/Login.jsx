@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { FaUserFriends, FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import './Login.css'
 
 const Login = () => {
     const [err, setErr] = useState('')
@@ -15,27 +16,27 @@ const Login = () => {
 
     const googleSignIn = () => {
         handleGoogleSignIn()
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-            navigate(from, { replace: true })
-        })
-        .catch(error =>{
-            console.log(error)
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
 
     const githubSignIn = () => {
         handleGithubSignIn()
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-            navigate(from, { replace: true })
-        })
-        .catch(error =>{
-            console.log(error)
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     const handleLogin = event => {
@@ -59,8 +60,11 @@ const Login = () => {
 
 
     return (
-        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5' style={{ width: '600px', height: '600px' }}>
+        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 login' style={{ width: '600px', height: '600px' }}>
             <Form className=' mx-auto w-75 mt-4' onSubmit={handleLogin}>
+                <Form.Text className='text-danger fs-5'>
+                    <p>{err}</p>
+                </Form.Text>
                 <h2 className='text-secondary'> <FaUserFriends style={{ fontSize: '3rem' }}></FaUserFriends> Login</h2>
                 <hr />
                 <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
@@ -76,25 +80,25 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <hr />
-                <Button  variant="secondary" type="submit" className='mt-3 p-2 fs-5'>
-                    Login
-                </Button>
-                <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
-                    <Link to='/register' className='text-white text-decoration-none'>Create an Account</Link>
-                </Button>
+                <div className='d-flex justify-content-center'>
+                    <Button variant="secondary" type="submit" className='mt-3 p-2 fs-5'>
+                        Login
+                    </Button>
+                    <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
+                        <Link to='/register' className='text-white text-decoration-none'>Create an Account</Link>
+                    </Button>
+                </div>
                 <br />
                 <h2 className='mx-auto text-center'>OR</h2>
                 <div className='text-center'>
-                    <Button onClick={googleSignIn}  variant="white" type="submit" className=' p-2 fs-5 mx-auto'>
+                    <Button onClick={googleSignIn} variant="white" type="submit" className=' p-2 fs-5 mx-auto'>
                         <FaGoogle></FaGoogle> Log in with Google
                     </Button>
                     <br />
-                    <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5'>
+                    <Button onClick={githubSignIn} variant="white" type="submit" className='mt-3 p-2 fs-5 github'>
                         <FaGithub></FaGithub> Log in with Github
                     </Button>
-                    <Form.Text className='text-danger fs-5'>
-                        <p>{err}</p>
-                    </Form.Text>
+
                 </div>
 
             </Form>

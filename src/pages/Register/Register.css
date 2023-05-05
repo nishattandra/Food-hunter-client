@@ -1,0 +1,6 @@
+@media  screen and (max-width: 480px){
+    .register{
+        height: 600x !important;
+        width: 350px !important;
+    }
+}

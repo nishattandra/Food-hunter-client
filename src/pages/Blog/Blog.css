@@ -1,0 +1,7 @@
+@media  screen and (max-width: 480px){
+    .blog{
+        height: 600x !important;
+        width: 376px !important;
+        padding: 0 !important;
+    }
+} 

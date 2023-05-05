@@ -1,6 +1,8 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import ReactToPdf from "react-to-pdf";
+import './Blog.css'
+
 const ref = React.createRef();
 const Blog = () => {
     const options = {
@@ -12,9 +14,9 @@ const Blog = () => {
     return (
         <div className='container'>
             <div className='container' ref={ref}>
-                <div className=' mt-5 p-5  border rounded mb-2'>
+                <div className=' mt-5 p-5  border rounded mb-2  blog'>
                     <h1 className='text-center font-bold'>Ques-01: Tell us the differences between uncontrolled and controlled components?</h1>
-                    <Table striped bordered hover className='mt-3 rounded'>
+                    <Table striped bordered hover className='mt-3 rounded blog'>
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -57,7 +59,7 @@ const Blog = () => {
                         </tbody>
                     </Table>
                 </div>
-                <div className=' m-10 p-5  border border-indigo-600 rounded-md mb-2'>
+                <div className=' m-10 p-5  border border-indigo-600 rounded-md mb-2 blog'>
                     <h1 className='text-center font-bold'>Ques-02: How to validate React props using PropTypes?</h1>
                     <p>Props are used to passing the read-only attributes to React components. For the proper functioning of components and to avoid future bugs and glitches it is necessary that props are passed correctly. Hence, it is required to use props validation for improving react component’s performance. React JS has an inbuilt feature for validating props data type to make sure that values passed through props are valid. React components have a property called propTypes which is used to setup data type validation.</p>
                     <h3>React PropTypes Validators</h3>
@@ -76,9 +78,9 @@ const Blog = () => {
                         <li> PropTypes.element: This means the props must be an element.</li>
                     </ol>
                 </div>
-                <div className=' m-10 p-5  border border-indigo-600 rounded-md mb-2'>
+                <div className=' m-10 p-5  border border-indigo-600 rounded-md mb-2 blog'>
                     <h1 className='text-center font-bold'>Ques-03: Tell us the difference between nodejs and express js?</h1>
-                    <Table striped bordered hover className='mt-3 rounded'>
+                    <Table striped bordered hover className='mt-3 rounded blog'>
                         <thead>
                             <tr>
                                 <th>No</th>

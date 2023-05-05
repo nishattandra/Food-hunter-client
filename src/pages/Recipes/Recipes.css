@@ -1,0 +1,7 @@
+@media  screen and (max-width: 480px){
+    .profile{
+        height: 600x !important;
+        width: 375px !important;
+    }
+    
+}
