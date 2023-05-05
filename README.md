@@ -2,7 +2,7 @@
 assignment-10-nishattandra created by GitHub Classroom
 
 ## Live Link
-Hosted in Github -> [Hunger Counter](https://assignment-10-ad2b3.web.app/)
+Hosted in Github -> [Food Hunter](https://assignment-10-ad2b3.web.app/)
 
 
 ## Server Side Repo
@@ -26,3 +26,9 @@ Icon -> [Hero Icon](https://heroicons.com/)
 
 ## Resources & Credits
 React Icon -> [React Icon](https://react-icons.github.io/react-icons/)
+
+## Resources & Credits
+Marquee -> [React First Marquee](https://www.react-fast-marquee.com/)
+
+## WebSite Idea
+ThemeForest -> [ThemeForest](https://themeforest.net/)

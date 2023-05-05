@@ -26,7 +26,7 @@ const NavigationBar = () => {
             <Container className='mt-2'>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='p-4 rounded' >
                     <Container>
-                        <h2 className='fw-bold'>Hunger<span className='text-success'>Court</span> </h2>
+                        <h2 className='fw-bold'>Food<span className='text-success'>Hunter</span> </h2>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">

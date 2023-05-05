@@ -1,0 +1,7 @@
+@media  screen and (max-width: 480px){
+    .img{
+      flex: none; 
+      height: 50px;
+      width: 50px !important;
+    }
+}

@@ -11,8 +11,11 @@ const SecondBanner = () => {
                 <img style={{ width: '700px', height: '500px' }} src={food5} alt="" />
             </div>
             <div>
-                <h1 className='ms-5 fw-bolder text-center' style={{marginTop:"120px"}}>WelCome to our <br /><span className='text-success'>Hunger Court </span></h1>
-                <Button className='text-center mt-4 fw-bold ' style={{marginLeft:'100px'}}>Explore More <HiArrowNarrowRight></HiArrowNarrowRight></Button>
+                <h1 className='ms-5 fw-bolder text-center' style={{ marginTop: "120px" }}>WelCome to Our <br /><span className='text-success'>Food Hunter </span></h1>
+                <p className='text-center fs-5'>Here we provide our best service. We have our best food. Pay a visit in our food corner. We hope that you like it.</p>
+                <div className='d-flex justify-content-center'>
+                    <Button className=' mt-2 fw-bold' >Explore More <HiArrowNarrowRight></HiArrowNarrowRight></Button>
+                </div>
             </div>
         </div>
 

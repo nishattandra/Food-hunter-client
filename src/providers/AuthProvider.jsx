@@ -25,6 +25,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
     const updateUserData = (user, name, photo) => {
+        setLoading(true);
         console.log(user, name, photo)
         updateProfile(user, {
             displayName: name,
