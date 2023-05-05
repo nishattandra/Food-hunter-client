@@ -39,7 +39,7 @@ const Register = () => {
     }
 
     return (
-        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 register' style={{ width: '650px', height: '620px' }}>
+        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 register' style={{ width: '650px' }}>
             <Form className=' mx-auto w-75 mt-4' onSubmit={handleRegister}>
                 <Form.Text className='text-danger fs-5'>
                     <p>{err}</p>
@@ -76,10 +76,10 @@ const Register = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <hr />
-                <Button variant="secondary" type="submit" className='mt-3 p-2 fs-5'>
+                <Button variant="secondary" type="submit" className='mt-3 p-2 fs-5 mb-3'>
                     Register
                 </Button>
-                <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5'>
+                <Button variant="secondary" type="submit" className='ms-3 p-2 mt-3 fs-5 mb-3'>
                     <Link to='/login' className='text-white text-decoration-none'>Login</Link>
                 </Button>
                 {/* <Form.Control type="submit" name='submit' placeholder="Submit" required /> */}

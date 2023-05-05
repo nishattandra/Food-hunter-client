@@ -1,9 +1,11 @@
 @media  screen and (max-width: 480px){
     .login{
-        height: 600x !important;
         width: 350px !important;
     }
 
+    .google{
+        margin-top: 0px !important;
+    }
     .github{
         margin-top: 0px !important;
     }

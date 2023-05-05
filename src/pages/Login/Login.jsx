@@ -60,8 +60,8 @@ const Login = () => {
 
 
     return (
-        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 login' style={{ width: '600px', height: '600px' }}>
-            <Form className=' mx-auto w-75 mt-4' onSubmit={handleLogin}>
+        <div className=' border border-primary-subtle rounded-4 mx-auto mt-5 login' style={{ width: '600px' }}>
+            <Form className=' mx-auto w-75' onSubmit={handleLogin}>
                 <Form.Text className='text-danger fs-5'>
                     <p>{err}</p>
                 </Form.Text>
@@ -91,7 +91,7 @@ const Login = () => {
                 <br />
                 <h2 className='mx-auto text-center'>OR</h2>
                 <div className='text-center'>
-                    <Button onClick={googleSignIn} variant="white" type="submit" className=' p-2 fs-5 mx-auto'>
+                    <Button onClick={googleSignIn} variant="white" type="submit" className=' p-2 fs-5 mx-auto google'>
                         <FaGoogle></FaGoogle> Log in with Google
                     </Button>
                     <br />
